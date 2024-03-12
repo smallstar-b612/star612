@@ -3,7 +3,7 @@ const router = express.Router();
 
 // 제품 기본정보
 router.get('/', (req, res) => {
-    res.send('제품 기본정보');
+    res.render('../../frontend/pages/shop.html');
 });
 
 router.get('/category', (req, res) => {

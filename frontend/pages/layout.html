@@ -1,19 +1,65 @@
 <!-- pages/layout.htm -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}MY Website{% endblock %}</title>
-    {% block head %}{% endblock %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/layout.css">
+    <title></title>{% block title %}Star612{% endblock %}</title>
+    {% block head %}
+    <style>
+
+    </style>
+    {% endblock %}
 </head>
+
 <body>
-    <nav>
-        네비게이터
+    <div class="header">
+        <div id="logo">
+            Star612
+        </div>
+        <nav id="nav">
+            <ul class="site">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li><a href="/board">Board</a></li>
+                <li><a href="/chat">Chat</a></li>
+            </ul>
     </nav>
-    <div>
-        {% block content %}{% endblock %}
+    <div id="function">
+            <ul class="member">
+                <li>로그인</li>
+                <li>회원가입</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="content">
+        {% block content %}        
+        {% endblock %}
+    </div>
+
+    <div class="footer">
+        {% block foot %}{% endblock %}
+        <table id="footbox">
+            <tr>
+                <td>
+                    <h2>작은별612</h2>
+                    <h3>Copyright ⓒ Star612.net All Rights Reserved</h3>
+                </td>
+            </tr>
+        </table>
     </div>
     
 </body>
+
 </html>

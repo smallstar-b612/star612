@@ -4,10 +4,11 @@ const path = require('path');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 
-const userRouter = require('./routers/userRouter');
-const productRouter = require('./routers/productRouter');
-const blogRouter = require('./routers/blogRouter');
-const chatRouter = require('./routers/chatRouter');
+const userRouter = require('./routes/userRouter');
+const shopRouter = require('./routes/shopRouter');
+const blogRouter = require('./routes/blogRouter');
+const chatRouter = require('./routes/chatRouter');
+const boardRouter = require('./routes/boardRouter');
 
 // express 설정
 const app = express();
@@ -28,8 +29,9 @@ app.use(session({
 
 // 라우터 설정
 app.use('/user', userRouter);
-app.use('/product', productRouter);
 app.use('/blog', blogRouter);
+app.use('/shop', shopRouter);
+app.use('/board', boardRouter);
 app.use('/chat', chatRouter);
 
 // nunjucks 초기화
@@ -51,11 +53,11 @@ app.use(express.json());
 // 라우터
 
 app.get('/', (req, res) => {
-    res.render('index.html');  // Nunjucks 템플릿 사용
+    res.render('../../frontend/pages/index.html');  // Nunjucks 템플릿 사용
 });
 
 app.get('/about', (req, res) => {
-    res.render('about.html');
+    res.render('../../frontend/pages/about.html');
 });
 
 app.listen(port, () => {

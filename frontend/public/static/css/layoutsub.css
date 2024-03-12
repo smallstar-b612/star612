@@ -1,0 +1,21 @@
+#subtitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 230px;
+}
+
+#subtitle h2 {
+    font-size: 35px;
+    text-align: center;
+    color: #000;
+}
+
+#subtitle h3 {
+    font-size: 20px;
+    text-align: center;
+    color: rgb(207, 0, 0);
+}
