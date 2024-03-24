@@ -3,12 +3,16 @@ const nunjucks = require('nunjucks');
 const path = require('path');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
+const mysql = require('mysql2');
 
-const userRouter = require('./routes/userRouter');
-const shopRouter = require('./routes/shopRouter');
-const blogRouter = require('./routes/blogRouter');
-const chatRouter = require('./routes/chatRouter');
-const boardRouter = require('./routes/boardRouter');
+const userRouter = require('./src/api/routes/userRouter');
+const shopRouter = require('./src/api/routes/shopRouter');
+const blogRouter = require('./src/api/routes/blogRouter');
+const chatRouter = require('./src/api/routes/chatRouter');
+const boardRouter = require('./src/api/routes/boardRouter');
+
+// Mysql DB 설정
+
 
 // express 설정
 const app = express();
@@ -19,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(session({
-    secret: 'abcd1234',
+    secret: 'star1234',
     resave: false,
     saveUninitialized: true,
     cookie: {
@@ -60,6 +64,6 @@ app.get('/about', (req, res) => {
     res.render('../../frontend/pages/about.html');
 });
 
-app.listen(port, () => {
-    console.log(`Server port ${port} ready`);
-})
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Server listening on port ${port}, accessible from any IP`);
+});
