@@ -1,0 +1,123 @@
+/* public/static/css/layout.css */
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 400 to 800 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+#logo, #nav, #function {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 30px;
+    justify-content: flex-start;
+}
+
+#nav {
+  font-family: "Eczar", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  padding: 20px;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+#nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+#nav li {
+    margin: 0 10px;
+}
+
+#nav li a {
+    border: 1px solid #ccc;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin-bottom: 2px;
+    margin-right: 2px;
+    line-height: 50px;
+    text-align: center;
+}
+#nav .site li a {
+    width: 100px;
+}
+
+#nav li:hover a,
+#nav li.active a {
+    border-color: #000;
+    background-color: #000;
+    color: #fff
+}
+
+#function {
+    justify-content: flex-end;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+#function ul {
+    display: flex;
+}
+
+#function li {
+    display: flex;
+    align-items: right;
+    width: 70px;
+}
+
+.footer {
+    border-top: #000 0.5px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+#footbox {
+    width: 80%;
+    height: 150px;
+}
+
+#footbox h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    color: #000000;
+}
+
+#footbox h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: 13px;
+    color: #252525;
+}

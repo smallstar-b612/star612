@@ -1,0 +1,12 @@
+## 파일
+*.csv
+*.bin
+*.bak
+*.json
+*.db
+*.sql
+
+## 폴더
+images/
+node_modules/
+bin/
